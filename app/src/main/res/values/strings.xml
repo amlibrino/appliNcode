@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">appliNcode</string>
+    <string name="bonjour_et_bienvenu_sur_l_application_ncode_de_l_afpa">Bonjour et bienvenu sur l\'application Ncode de l\'AFPA</string>
+    <string name="afficher_le_planing">Afficher le planing</string>
+    <string name="chercher_un_stagiaire">Chercher un stagiaire</string>
+    <string name="faites_une_recherche_de_stagiaire">Faites une recherche de stagiaire</string>
+    <string name="tapez_le_nom_ou_le_pr_nom">Tapez le nom ou le prénom</string>
+</resources>
