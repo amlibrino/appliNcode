@@ -44,7 +44,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="lanchRecherche"/>
+        android:onClick="lanchPlanning"/>
 
 
     <Button
@@ -58,7 +58,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="lanchPlanning"/>
+        android:onClick="lanchRecherche"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,16 +14,17 @@
         android:layout_height="46dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/tapez_le_nom_ou_le_pr_nom"
+        android:hint="@string/tapez_le_nom_ou_le_pr_nom"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.169" />
 
     <TextView
+        android:id="@+id/text_nom"
         android:layout_width="295dp"
         android:layout_height="51dp"
         android:layout_marginTop="44dp"
@@ -59,6 +60,18 @@
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.146" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="Go"
+        android:background="#87bb34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="rechercheNom"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
