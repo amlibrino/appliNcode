@@ -43,7 +43,7 @@ public class Recherche extends AppCompatActivity {
 
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://localhost/api_Ncode/")//base url du site de l'api
+                .baseUrl("https://dev.amorce.org/apicode/api_Ncode/")//base url du site de l'api
                 .addConverterFactory(GsonConverterFactory.create())//creer le convertor gson
                 .build();//le contruire
         NcodeApi ncodeApi = retrofit.create(NcodeApi.class);
