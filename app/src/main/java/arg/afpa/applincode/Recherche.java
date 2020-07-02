@@ -20,10 +20,9 @@ import retrofit2.Retrofit;
 
 public class Recherche extends AppCompatActivity {
 
-    private TextView textViewResult;
+    private TextView textResult;
     private TextView text_nom;
-    private View view;
-
+    private String nom;
 
 
     @Override
@@ -32,7 +31,7 @@ public class Recherche extends AppCompatActivity {
         setContentView(R.layout.activity_recherche);
 
         text_nom = findViewById(R.id.text_nom);
-        textViewResult = findViewById(R.id.textResult);
+        textResult = findViewById(R.id.textResult);
 
 
     }
@@ -42,21 +41,24 @@ public class Recherche extends AppCompatActivity {
         //view.setVisibility();
 
 
+        nom = (String) text_nom.getText();
+
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://dev.amorce.org/apicode/api_Ncode/")//base url du site de l'api
                 .addConverterFactory(GsonConverterFactory.create())//creer le convertor gson
                 .build();//le contruire
         NcodeApi ncodeApi = retrofit.create(NcodeApi.class);
-        String nom2 = (String) text_nom.getText();
 
-        Call<List<UserData>> call = ncodeApi.getUserDataNom(nom2);
+        Call<List<UserData>> call = ncodeApi.getUserDataNom(nom);
+
         call.enqueue(new Callback<List<UserData>>() {
             @Override
             public void onResponse(Call<List<UserData>> call, Response<List<UserData>> response) {
 
                 //qlq groupe mal lié dans la base (j'affiche une alete pour l'eereur) ERREUR 404 jason
                 if (!response.isSuccessful()) {
-                    textViewResult.setText("Code: " + response.code());
+                    textResult.setText("Code: " + response.code());
                     return;
                 }
 
@@ -72,12 +74,12 @@ public class Recherche extends AppCompatActivity {
                     content += "Email : " + post.getEmail() + "\n";
                     content += "Numéro de téléphone : " + post.getTelephone() + "\n";
                     content += "Fonction : " + post.getRole() + "\n\n\n";
-                    textViewResult.append(content);
+                    textResult.append(content);
                 }
             }
             @Override
             public void onFailure(Call<List<UserData>> call, Throwable t) {
-                textViewResult.setText(t.getMessage());
+                textResult.setText(t.getMessage());
 
             }
         });

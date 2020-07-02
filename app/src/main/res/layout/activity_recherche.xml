@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/text_nom"
         android:layout_width="242dp"
         android:layout_height="46dp"
         android:ems="10"
@@ -24,7 +24,6 @@
         app:layout_constraintVertical_bias="0.169" />
 
     <TextView
-        android:id="@+id/text_nom"
         android:layout_width="295dp"
         android:layout_height="51dp"
         android:layout_marginTop="44dp"
@@ -42,13 +41,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
-        android:text="Go"
         android:background="#87bb34"
+        android:onClick="rechercheNom"
+        android:text="Go"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="rechercheNom"/>
+        app:layout_constraintStart_toEndOf="@+id/text_nom"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="368dp"
