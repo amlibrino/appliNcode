@@ -50,8 +50,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="368dp"
-        android:layout_height="460dp"
+        android:layout_width="357dp"
+        android:layout_height="456dp"
         android:layout_marginTop="212dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
