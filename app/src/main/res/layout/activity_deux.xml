@@ -4,32 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".activity_deux">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="335dp"
-        android:layout_height="65dp"
+        android:layout_width="328dp"
+        android:layout_height="63dp"
         android:text="@string/bonjour_et_bienvenu_sur_l_application_ncode_de_l_afpa"
         android:textAlignment="center"
-        android:textColor="#010101"
+        android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintVertical_bias="0.173" />
+
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="147dp"
         android:layout_height="85dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="616dp"
         android:layout_marginEnd="40dp"
         android:src="@drawable/layout_set_logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,28 +41,26 @@
         android:id="@+id/btn_planning"
         android:layout_width="193dp"
         android:layout_height="51dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="244dp"
         android:background="#87bb34"
+        android:onClick="lanchPlanning"
         android:text="@string/afficher_le_planing"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="lanchPlanning"/>
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_recherche"
         android:layout_width="201dp"
         android:layout_height="48dp"
-        android:layout_marginTop="484dp"
+        android:layout_marginTop="340dp"
         android:background="#44a33d"
+        android:onClick="lanchRecherche"
         android:text="@string/chercher_un_stagiaire"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="lanchRecherche"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

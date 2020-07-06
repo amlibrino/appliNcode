@@ -10,7 +10,9 @@ import okhttp3.internal.platform.Platform;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import java.util.List;
 import retrofit2.Call;
@@ -21,7 +23,7 @@ import retrofit2.Retrofit;
 public class Recherche extends AppCompatActivity {
 
     private TextView textResult;
-    private TextView text_nom;
+    private EditText text_nom;
     private String nom;
 
 
@@ -33,7 +35,6 @@ public class Recherche extends AppCompatActivity {
         text_nom = findViewById(R.id.text_nom);
         textResult = findViewById(R.id.textResult);
 
-
     }
 
     public void rechercheNom(View view) {
@@ -41,8 +42,7 @@ public class Recherche extends AppCompatActivity {
         //view.setVisibility();
 
 
-        nom = (String) text_nom.getText();
-
+        nom = String.valueOf(text_nom.getText());
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://dev.amorce.org/apicode/api_Ncode/")//base url du site de l'api
