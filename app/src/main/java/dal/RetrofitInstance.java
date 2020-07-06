@@ -12,9 +12,9 @@ public class RetrofitInstance {
     public static Retrofit getRetrofitInstance(){
         if(retrofit == null){
             retrofit = new retrofit2.Retrofit.Builder()
-                    .baseUrl(BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
+                    .baseUrl(BASE_URL)//base url du site de l'api
+                    .addConverterFactory(GsonConverterFactory.create()) //creer le convertor en gson
+                    .build(); //le contruire
         }
         return retrofit;
     }
