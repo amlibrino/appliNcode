@@ -39,9 +39,7 @@ public class Recherche extends AppCompatActivity {
 
     public void rechercheNom(View view) {
 
-        //view.setVisibility();
-
-
+        textResult.setText("");//pour vider la recherche précedente
         nom = String.valueOf(text_nom.getText());
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -58,7 +56,7 @@ public class Recherche extends AppCompatActivity {
 
                 //qlq groupe mal lié dans la base (j'affiche une alete pour l'eereur) ERREUR 404 jason
                 if (!response.isSuccessful()) {
-                    textResult.setText("Code: " + response.code());
+                    textResult.setText("Code : " + response.code() + "  Aucun résultat trouvé pour cette recherche");
                     return;
                 }
 
