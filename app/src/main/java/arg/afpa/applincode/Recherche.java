@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import dal.NcodeApi;
+import dal.RetrofitInstance;
 import dal.UserData;
 import okhttp3.internal.platform.Platform;
 import retrofit2.Retrofit;
@@ -42,11 +43,8 @@ public class Recherche extends AppCompatActivity {
         textResult.setText("");//pour vider la recherche précedente
         nom = String.valueOf(text_nom.getText());
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://dev.amorce.org/apicode/api_Ncode/")//base url du site de l'api
-                .addConverterFactory(GsonConverterFactory.create())//creer le convertor gson
-                .build();//le contruire
-        NcodeApi ncodeApi = retrofit.create(NcodeApi.class);
+        //appler l'instance retrofit
+        NcodeApi ncodeApi = RetrofitInstance.getRetrofitInstance().create(NcodeApi.class);
 
         Call<List<UserData>> call = ncodeApi.getUserDataNom(nom);
 
