@@ -33,15 +33,16 @@ public class Recherche extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recherche);
 
-        text_nom = findViewById(R.id.text_nom);
-        textResult = findViewById(R.id.textResult);
+
 
     }
 
     public void rechercheNom(View view) {
 
+        text_nom = findViewById(R.id.text_nom);
+        textResult = findViewById(R.id.textResult);
         textResult.setText("");//pour vider la recherche précedente
-        nom = String.valueOf(text_nom.getText());
+        nom = String.valueOf(text_nom.getText());//dans un editetext on peut pas recuperer la valeur du string d'ou String.valueOf
 
         //appler l'instance retrofit
         NcodeApi ncodeApi = RetrofitInstance.getRetrofitInstance().create(NcodeApi.class);

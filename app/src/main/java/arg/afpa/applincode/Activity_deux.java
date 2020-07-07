@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class activity_deux extends AppCompatActivity {
+public class Activity_deux extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

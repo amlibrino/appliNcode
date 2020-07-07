@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="arg.afpa.applincode">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -11,14 +12,16 @@
         android:roundIcon="@mipmap/afpa"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Planning"
+        <activity android:name=".Login"></activity>
+        <activity
+            android:name=".Planning"
             android:label="Planning"
-            android:parentActivityName=".activity_deux"/>
-
-        <activity android:name=".Recherche"
+            android:parentActivityName=".Activity_deux" />
+        <activity
+            android:name=".Recherche"
             android:label="Recherche"
-            android:parentActivityName=".activity_deux"/>
-        <activity android:name=".activity_deux" />
+            android:parentActivityName=".Activity_deux" />
+        <activity android:name=".Activity_deux" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

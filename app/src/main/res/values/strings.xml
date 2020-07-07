@@ -5,4 +5,8 @@
     <string name="chercher_un_stagiaire">Chercher un stagiaire</string>
     <string name="faites_une_recherche_de_stagiaire">Faites une recherche de stagiaire</string>
     <string name="tapez_le_nom_ou_le_pr_nom">Tapez le nom ou le prénom</string>
+    <string name="identifiant">Identifiant</string>
+    <string name="mot_de_passe">mot de passe</string>
+    <string name="identification">Identification</string>
+    <string name="go">GO</string>
 </resources>
