@@ -15,6 +15,7 @@ import java.util.Map;
 
 public class Planning extends AppCompatActivity {
     private WebView webView;
+    final String url = "https://ncode.amorce.org/offre/planning//";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +25,12 @@ public class Planning extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webview);
 
         webView.setWebViewClient(getWebViewClient());
-        webView.loadUrl("https://ncode.amorce.org/offre/planning//");
         WebSettings webSettings = webView.getSettings();
-
+        webView.loadUrl(url);
 
     }
     // d'abord créer une méthode, qui sera le retour de vos en-têtes que vous souhaitez ajouter à la demande:
-    private Map<String, String> getCustomHeaders()
+    private Map<String, String> getHeaders()
     {
         Map<String, String> headers = new HashMap<>();
         headers.put("AFPA-TOKEN-API-AUTH", "pcS50ha7RIOUAM3vM3P1Lib0OcZm090ua4qi8hNVtALOcpMapWGSgAXZEYHTJ8ZZLxtJl07ODoSul0nC");
@@ -49,14 +49,14 @@ public class Planning extends AppCompatActivity {
             @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request)
             {
-                view.loadUrl(request.getUrl().toString(), getCustomHeaders());
+                view.loadUrl(request.getUrl().toString(), getHeaders());
                 return true;
             }
 
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url)
             {
-                view.loadUrl(url, getCustomHeaders());
+                view.loadUrl(url, getHeaders());
                 return true;
             }
         };
