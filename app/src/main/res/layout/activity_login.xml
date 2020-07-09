@@ -72,7 +72,7 @@
         android:id="@+id/btn_login"
         android:layout_width="102dp"
         android:layout_height="81dp"
-        android:layout_marginTop="424dp"
+        android:layout_marginTop="420dp"
         android:background="@drawable/btn_connex"
         android:onClick="login"
         android:text="@string/go"

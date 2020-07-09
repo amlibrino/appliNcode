@@ -32,9 +32,6 @@ public class Recherche extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recherche);
-
-
-
     }
 
     public void rechercheNom(View view) {

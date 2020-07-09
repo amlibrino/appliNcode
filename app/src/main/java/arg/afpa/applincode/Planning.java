@@ -25,8 +25,8 @@ public class Planning extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webview);
 
         webView.setWebViewClient(getWebViewClient());
-        WebSettings webSettings = webView.getSettings();
-        webView.loadUrl(url);
+        //WebSettings webSettings = webView.getSettings();
+        webView.loadUrl(url,getHeaders());
 
     }
     // d'abord créer une méthode, qui sera le retour de vos en-têtes que vous souhaitez ajouter à la demande:
